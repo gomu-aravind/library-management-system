@@ -1,0 +1,17 @@
+
+
+.testimonial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:5px;
+
+}
+.testimonial::after{
+    content:'';
+    display: block;
+    border:1px solid #0c2d48;
+    width:7.3%;
+    margin-bottom: 1rem;
+}

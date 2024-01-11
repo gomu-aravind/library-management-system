@@ -1,0 +1,21 @@
+.pricing{
+    margin-top: 2rem;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:5px;
+
+}
+.price::after{
+    content:'';
+    display: block;
+    border:1px solid #0c2d48;
+    width:9.5%;
+}
+.heading{
+    color:#0c2d48;
+}

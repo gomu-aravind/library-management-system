@@ -1,0 +1,24 @@
+.about{
+    margin-top: 2rem;
+}
+.aboutimage{
+    object-fit:contain;
+}
+
+.sub{
+    color: #0c2d48;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:5px;
+}
+.heading::after{
+    content:'';
+    display: block;
+    border:1px solid #0c2d48;
+    width:5%;
+}

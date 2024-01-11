@@ -1,0 +1,13 @@
+.button-group{
+    display: flex;
+  align-items: center;
+}
+
+.btn{
+    padding:0px 5px;
+    width:fit-content;
+}
+
+.word{
+    margin:0px 3px;
+  }

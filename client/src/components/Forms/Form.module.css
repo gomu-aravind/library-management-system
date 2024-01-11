@@ -1,0 +1,13 @@
+.marg-tp{
+    margin-top:5rem;
+}
+
+.fl{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.marg-x{
+    margin-top:5rem;
+    margin-bottom: 3rem;
+}

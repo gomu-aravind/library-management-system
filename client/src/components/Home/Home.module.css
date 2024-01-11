@@ -1,0 +1,25 @@
+.top{
+    margin-top: 5rem;
+}
+
+.img-top{
+    margin-top: 0;
+}
+.mn-color{
+    color:#0c2d48
+}
+
+@media screen and (max-width:1024px) {
+    .img-top{
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (max-width:992px){
+    .row{
+        flex-direction: column;
+    }
+    .img-top{
+        margin-top: 0;
+    }
+}

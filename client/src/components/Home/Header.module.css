@@ -1,0 +1,13 @@
+#header li .txt{
+    color:#0C2D48;
+}
+
+#header li .txt:hover,
+#header li .txt:active{
+    color:#4299df;
+    cursor: pointer;
+}
+
+#header li .highlight{
+    color:#4299df;
+}

@@ -1,0 +1,19 @@
+.how{
+    margin-top: 2rem;
+}
+#heading{
+    color:#0c2d48;
+}
+.how-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:5px;
+}
+.how-head::after{
+    content:'';
+    display: block;
+    border:1px solid #0c2d48;
+    width:8%;
+}
