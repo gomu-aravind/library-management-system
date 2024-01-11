@@ -393,8 +393,14 @@ exports.logout = async (req, res, next) => {
     user.subscription.discountSession=0
     await user.save()
   }
-  res.clearCookie("accessToken");
-  res.clearCookie("refreshToken");
+  res.clearCookie("accessToken",{
+    httpOnly:true,
+    secure:true
+  });
+  res.clearCookie("refreshToken",{
+    httpOnly:true,
+    secure:true
+  });
   res.status(200).json({
     success: true,
     message: "Logged out",
