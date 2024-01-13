@@ -15,6 +15,7 @@ function Register() {
     password: false,
     confirmPassword: false,
   });
+  const [isLoading,setIsLoading]=useState(false)
   const [errors, setErrors] = useState({});
   const navigate=useNavigate()
 
@@ -34,6 +35,7 @@ function Register() {
         email: emailRef.current.value,
         password: passwordRef.current.value,
       };
+      setIsLoading(true)
       const resData = await fetch(
         import.meta.env.VITE_SERVER_URL + "/user/register",
         {
@@ -45,6 +47,7 @@ function Register() {
         }
       );
       const finalData = await resData.json();
+      setIsLoading(false)
       if(finalData.success){
         setErrors({})
         toast.success('Registered Successfully')
@@ -65,6 +68,14 @@ function Register() {
       };
     });
   };
+
+  if(isLoading){
+    return <div className="d-flex justify-content-center">
+    <div className="spinner-grow text-success" role="status">
+      <span className="sr-only">Loading...</span>
+    </div>
+  </div>
+  }
   return (
     <div className={`container ${classes["marg-tp"]}`}>
       <div className="row align-items-center justify-content-center">
