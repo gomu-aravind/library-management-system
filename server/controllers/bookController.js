@@ -143,7 +143,7 @@ exports.getAllBooks=async (req,res,next)=>{
     const pageSize = 3;
     const page = Number(req.query.pageNumber) || 1;
     let query = {};
-    if (plan === 'LITE') {
+    if (plan === 'LITE' || plan===null) {
         query = { genre: { $ne: 'Business' } };
     }
     try {
