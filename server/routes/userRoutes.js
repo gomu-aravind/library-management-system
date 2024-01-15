@@ -8,7 +8,7 @@ router.post('/register',registerUser)
 
 router.post('/login',login)
 
-router.get('/logout',isAuthorized,logout)
+router.post('/logout',isAuthorized,logout)
 
 router.post('/borrow',isUser,borrowBook)
 
