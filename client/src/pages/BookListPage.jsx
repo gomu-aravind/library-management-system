@@ -53,6 +53,7 @@ function BookListPage(props) {
         setGenre(['','Comics','Motivation','Fiction','Biography','Mystery'])
         setPlan(bookData.plan)
       }else{
+        setGenre(['','Comics','Motivation','Fiction','Biography','Mystery'])
         setPlan(bookData.plan)
       }
       if(bookData.count){
@@ -94,17 +95,14 @@ function BookListPage(props) {
   return (
     <section id="booklist">
       <div className="container my-5">
-        {plan===null && <div className="text-center mt-5">
-          <h4>You have not subscribed to any plan.</h4>
-          <Link to="purchase" className="btn btn-info">Click to see Plan Setails</Link>
-          </div>}
+        
           {isLoading &&  <div className="text-center">
       <div className="spinner-border text-success" role="status">
         <span className="visually-hidden">Loading...</span>
       </div>
       </div>}
-        {plan!==null && bookData.length==0 && mainContent}
-        {plan!=null && bookData.length>0 && <><div className="btn-group mb-5">
+        { bookData.length==0 && mainContent}
+        {bookData.length>0 && <><div className="btn-group mb-5">
           <button
             className="btn btn-light btn-sm dropdown-toggle"
             type="button"
