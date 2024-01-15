@@ -395,11 +395,15 @@ exports.logout = async (req, res, next) => {
   }
   res.clearCookie("accessToken",{
     httpOnly:true,
-    secure:true
+    secure:true,
+    sameSite: "None",
+    maxAge: 25 * 60 * 1000,
   });
   res.clearCookie("refreshToken",{
     httpOnly:true,
-    secure:true
+    secure:true,
+    sameSite: "None",
+    maxAge: 2 * 60 * 60 * 1000,
   });
   res.status(200).json({
     success: true,
